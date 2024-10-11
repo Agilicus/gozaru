@@ -1,4 +1,4 @@
-module github.com/subosito/gozaru
+module github.com/Agilicus/gozaru
 
 go 1.12
 
