@@ -23,7 +23,7 @@ var (
 )
 
 func Sanitize(s string) string {
-	return sanitize(s, 0, "")
+	return sanitize(s, 0, FallbackFilename)
 }
 
 func SanitizeFallback(s string, fallback string) string {
@@ -39,10 +39,6 @@ func SanitizePadFallback(s string, n int, fallback string) string {
 }
 
 func sanitize(s string, n int, fallback string) string {
-	if fallback == "" {
-		fallback = FallbackFilename
-	}
-
 	sc := clean(s, fallback)
 	nc := len(sc)
 
