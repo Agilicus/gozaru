@@ -111,3 +111,8 @@ func filterDot(s string, fallback string) string {
 
 	return s
 }
+
+
+func SanitizeDir(s string) string {
+	return strings.TrimRight(sanitize(s, 0, ""), ".")
+}

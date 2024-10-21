@@ -65,6 +65,7 @@ func TestGozaru_dots(t *testing.T) {
 	assert.Equal(t, "file.pdf", gozaru.Sanitize(`.pdf`))
 	assert.Equal(t, "file.pdf", gozaru.Sanitize(`<.pdf`))
 	assert.Equal(t, "file..pdf", gozaru.Sanitize(`..pdf`))
+	assert.Equal(t, "Org Name.2 Inc", gozaru.SanitizeDir(`Org Name.2 Inc..`))
 }
 
 func TestGozaru_fallback(t *testing.T) {
